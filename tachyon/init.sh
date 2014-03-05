@@ -28,9 +28,9 @@ then
 
   # Setup Tachyon
   echo "Get lastest Tachyon from github:"
-  git clone git@github.com:amplab/tachyon.git
+  git clone https://github.com/amplab/tachyon.git
   cd tachyon
-  mvn clean package
+  mvn clean -DskipTests package
 # Pre-package Tachyon version
 else
   case "$TACHYON_VERSION" in
