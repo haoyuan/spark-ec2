@@ -39,8 +39,12 @@ then
     cd /root/hadoop-2.3.0 ;
     mkdir conf ;
     cd /root ;
-    cp /root/ephemeral-hdfs/conf/* /root/hadoop-2.3.0/conf/. ;
+    cp /root/ephemeral-hdfs/conf/* /root/hadoop-2.3.0/conf/ ;
     /root/spark-ec2/copy-dir /root/hadoop-2.3.0 ;
+    # cd /root/hadoop-2.3.0 ;
+    # cp /root/hadoop-native/* /root/hadoop-2.3.0/lib/native/ ;
+    # ./bin/hdfs namenode -format ;
+    # ./sbin/start-dfs.sh ;
 
     cd /root/tachyon ;
     mvn clean -Dhadoop.version=2.3.0 -DskipTests package ;
