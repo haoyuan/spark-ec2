@@ -9,6 +9,7 @@ fi
 
 # TACHYON_VERSION=0.4.1
 TACHYON_VERSION=9.9.9
+TACHYON_HADOOP_VERSION=2.3.0
 
 # Github tag:
 if [[ "$TACHYON_VERSION" == 9.9.9 ]]
@@ -29,8 +30,24 @@ then
   # Setup Tachyon
   echo "Get lastest Tachyon from github:"
   git clone https://github.com/amplab/tachyon.git
-  cd tachyon
-  mvn clean -DskipTests package
+
+  if [[ "$TACHYON_HADOOP_VERSION" == 2.3.0 ]]
+  then
+    cd ..
+    wget https://s3.amazonaws.com/Tachyon/hadoop-2.3.0.tar.gz ;
+    tar -xzvf hadoop-2.3.0.tar.gz ;
+    cd hadoop-2.3.0 ;
+    mkdir conf ;
+    cd .. ;
+    cp ephemeral-hdfs/conf/* hadoop-2.3.0/conf/. ;
+    /root/spark-ec2/copy-dir /root/hadoop-2.3.0
+
+    cd tachyon ;
+    mvn clean -Dhadoop.version=2.3.0 -DskipTests package ;
+  else
+    cd tachyon ;
+    mvn clean -DskipTests package ;
+  fi
 # Pre-package Tachyon version
 else
   case "$TACHYON_VERSION" in
