@@ -33,19 +33,19 @@ then
 
   if [[ "$TACHYON_HADOOP_VERSION" == 2.3.0 ]]
   then
-    cd ..
+    cd /root
     wget https://s3.amazonaws.com/Tachyon/hadoop-2.3.0.tar.gz ;
     tar -xzvf hadoop-2.3.0.tar.gz ;
-    cd hadoop-2.3.0 ;
+    cd /root/hadoop-2.3.0 ;
     mkdir conf ;
-    cd .. ;
-    cp ephemeral-hdfs/conf/* hadoop-2.3.0/conf/. ;
+    cd /root ;
+    cp /root/ephemeral-hdfs/conf/* /root/hadoop-2.3.0/conf/. & ;
     /root/spark-ec2/copy-dir /root/hadoop-2.3.0
 
-    cd tachyon ;
+    cd /root/tachyon ;
     mvn clean -Dhadoop.version=2.3.0 -DskipTests package ;
   else
-    cd tachyon ;
+    cd /root/tachyon ;
     mvn clean -DskipTests package ;
   fi
 # Pre-package Tachyon version
