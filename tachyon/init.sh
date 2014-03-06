@@ -39,8 +39,8 @@ then
     cd /root/hadoop-2.3.0 ;
     mkdir conf ;
     cd /root ;
-    cp /root/ephemeral-hdfs/conf/* /root/hadoop-2.3.0/conf/. & ;
-    /root/spark-ec2/copy-dir /root/hadoop-2.3.0
+    cp /root/ephemeral-hdfs/conf/* /root/hadoop-2.3.0/conf/. ;
+    /root/spark-ec2/copy-dir /root/hadoop-2.3.0 ;
 
     cd /root/tachyon ;
     mvn clean -Dhadoop.version=2.3.0 -DskipTests package ;
