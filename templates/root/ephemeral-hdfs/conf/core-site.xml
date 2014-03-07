@@ -21,6 +21,11 @@
   </property>
 
   <property>
+    <name>dfs.datanode.max.locked.memory</name>
+    <value>1073741824</value>
+  </property>
+
+  <property>
     <name>dfs.client.read.shortcircuit</name>
     <value>true</value>
   </property>
