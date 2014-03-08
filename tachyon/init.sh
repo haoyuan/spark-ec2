@@ -39,7 +39,8 @@ then
     cd /root/hadoop-2.3.0 ;
     mkdir conf ;
     cd /root ;
-    cp /root/ephemeral-hdfs/etc/hadoop/* /root/hadoop-2.3.0/etc/hadoop/. ;
+    rm /root/hadoop-2.3.0/etc/hadoop/* ;
+    cp /root/ephemeral-hdfs/conf/* /root/hadoop-2.3.0/etc/hadoop/. ;
     /root/spark-ec2/copy-dir /root/hadoop-2.3.0 ;
     cd /root/hadoop-2.3.0 ;
     ./bin/hdfs namenode -format ;
