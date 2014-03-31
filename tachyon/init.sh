@@ -47,10 +47,10 @@ then
     # ./sbin/start-dfs.sh ;
 
     cd /root/tachyon ;
-    mvn clean -Dhadoop.version=2.3.0 -DskipTests package ;
+    mvn clean -Dhadoop.version=2.3.0 -DskipTests install ;
   else
     cd /root/tachyon ;
-    mvn clean -DskipTests package ;
+    mvn clean -DskipTests install ;
   fi
 # Pre-package Tachyon version
 else
