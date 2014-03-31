@@ -50,4 +50,9 @@
     <value>tachyon.hadoop.TFS</value>
   </property>
 
+  <property>
+    <name>dfs.namenode.path.based.cache.refresh.interval.ms</name>
+    <value>30000</value>
+  </property>
+
 </configuration>
