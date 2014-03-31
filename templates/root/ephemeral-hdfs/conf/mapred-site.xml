@@ -12,7 +12,7 @@
 
   <property>
     <name>mapred.tasktracker.map.tasks.maximum</name>
-    <value>4</value>
+    <value>28</value>
     <description>The maximum number of map tasks that will be run
     simultaneously by a task tracker.
     </description>
@@ -20,10 +20,19 @@
 
   <property>
     <name>mapred.tasktracker.reduce.tasks.maximum</name>
-    <value>2</value>
+    <value>4</value>
     <description>The maximum number of reduce tasks that will be run
     simultaneously by a task tracker.
     </description>
   </property>
 
+  <property>
+    <name>fs.s3n.awsAccessKeyId</name>
+    <value>{{s3n_awsAccessKeyId}}</value>
+  </property>
+
+  <property>
+    <name>fs.s3n.awsSecretAccessKey</name>
+    <value>{{s3n_awsSecretAccessKey}}</value>
+  </property>
 </configuration>
