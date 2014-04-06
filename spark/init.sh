@@ -21,7 +21,7 @@ then
   git clone git@github.com:haoyuan/spark-tachyon.git spark
   pushd spark
   SPARK_HADOOP_VERSION=2.3.0 sbt/sbt clean assembly
-  sbt/sbt publish-local
+  # sbt/sbt publish-local
   popd
 
 # Pre-packaged spark version:
