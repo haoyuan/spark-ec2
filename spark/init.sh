@@ -21,7 +21,8 @@ then
   git clone https://github.com/haoyuan/spark.git spark
   pushd spark
   git checkout d
-  SPARK_HADOOP_VERSION=2.3.0 sbt/sbt clean assembly
+  sbt/sbt assembly
+  sbt/sbt assembly
   # sbt/sbt publish-local
   popd
 
