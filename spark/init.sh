@@ -18,7 +18,7 @@ then
   # git remote add origin $repo
   # git fetch origin
   # git checkout $git_hash
-  git clone git@github.com:haoyuan/spark.git spark
+  git clone https://github.com/haoyuan/spark.git spark
   pushd spark
   SPARK_HADOOP_VERSION=2.3.0 sbt/sbt clean assembly
   # sbt/sbt publish-local
