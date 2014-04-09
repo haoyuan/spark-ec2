@@ -11,6 +11,11 @@
   </property>
 
   <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+
+  <property>
     <name>mapred.tasktracker.map.tasks.maximum</name>
     <value>28</value>
     <description>The maximum number of map tasks that will be run
