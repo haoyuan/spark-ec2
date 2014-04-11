@@ -30,7 +30,7 @@ then
 
   # Setup Tachyon
   echo "Get lastest Tachyon from github:"
-  git clone https://github.com/amplab/tachyon.git
+  git clone https://github.com/amplab/tachyon.git -b test
 
   if [[ "$TACHYON_HADOOP_VERSION" == 2.3.0 ]]
   then
