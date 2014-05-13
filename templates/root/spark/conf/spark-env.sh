@@ -21,11 +21,16 @@ SPARK_JAVA_OPTS+=" -Dspark.local.dir={{spark_local_dirs}}"
 SPARK_JAVA_OPTS+=" -Dspark.tachyon.address=tachyon://{{active_master}}:19998"
 export SPARK_JAVA_OPTS
 
+export SPARK_MASTER_OPTS="{{spark_master_opts}}"
+
 export HADOOP_HOME="/root/ephemeral-hdfs"
 export SPARK_LIBRARY_PATH="/root/ephemeral-hdfs/lib/native/"
 export SPARK_MASTER_IP={{active_master}}
 export MASTER=`cat /root/spark-ec2/cluster-url`
 export SPARK_CLASSPATH=$SPARK_CLASSPATH":/root/ephemeral-hdfs/conf"
+
+export SPARK_WORKER_INSTANCES={{spark_worker_instances}}
+export SPARK_WORKER_CORES={{spark_worker_cores}}
 
 # Bind Spark's web UIs to this machine's public EC2 hostname:
 export SPARK_PUBLIC_DNS=`wget -q -O - http://169.254.169.254/latest/meta-data/public-hostname`
