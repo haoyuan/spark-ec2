@@ -19,16 +19,16 @@ wait
 
 NAMENODE_DIR=/mnt/ephemeral-hdfs/dfs/name
 
-if [ -f "$NAMENODE_DIR/current/VERSION" ] && [ -f "$NAMENODE_DIR/current/fsimage" ]; then
-  echo "Hadoop namenode appears to be formatted: skipping"
-else
-  echo "Formatting ephemeral HDFS namenode..."
-  $EPHEMERAL_HDFS/bin/hadoop namenode -format
-fi
-
-echo "Starting ephemeral HDFS..."
-# This is different depending on version. Simple hack: just try both.
-$EPHEMERAL_HDFS/sbin/start-dfs.sh
-$EPHEMERAL_HDFS/bin/start-dfs.sh
+#if [ -f "$NAMENODE_DIR/current/VERSION" ] && [ -f "$NAMENODE_DIR/current/fsimage" ]; then
+#  echo "Hadoop namenode appears to be formatted: skipping"
+#else
+#  echo "Formatting ephemeral HDFS namenode..."
+#  $EPHEMERAL_HDFS/bin/hadoop namenode -format
+#fi
+#
+#echo "Starting ephemeral HDFS..."
+## This is different depending on version. Simple hack: just try both.
+#$EPHEMERAL_HDFS/sbin/start-dfs.sh
+#$EPHEMERAL_HDFS/bin/start-dfs.sh
 
 popd

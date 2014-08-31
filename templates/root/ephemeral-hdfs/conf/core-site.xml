@@ -21,13 +21,18 @@
   </property>
 
   <property>
+    <name>dfs.datanode.max.locked.memory</name>
+    <value>1073741824</value>
+  </property>
+
+  <property>
     <name>dfs.client.read.shortcircuit</name>
-    <value>false</value>
+    <value>true</value>
   </property>
 
   <property>
     <name>dfs.client.read.shortcircuit.skip.checksum</name>
-    <value>false</value>
+    <value>true</value>
   </property>
 
   <property>
@@ -43,6 +48,11 @@
   <property>
     <name>fs.tachyon.impl</name>
     <value>tachyon.hadoop.TFS</value>
+  </property>
+
+  <property>
+    <name>dfs.namenode.path.based.cache.refresh.interval.ms</name>
+    <value>30000</value>
   </property>
 
 </configuration>

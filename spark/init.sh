@@ -10,16 +10,19 @@ fi
 # Github tag:
 if [[ "$SPARK_VERSION" == *\|* ]]
 then
-  mkdir spark
+#  mkdir spark
+  git clone https://github.com/haoyuan/spark.git spark  
   pushd spark
-  git init
-  repo=`python -c "print '$SPARK_VERSION'.split('|')[0]"` 
-  git_hash=`python -c "print '$SPARK_VERSION'.split('|')[1]"`
-  git remote add origin $repo
-  git fetch origin
-  git checkout $git_hash
+#  git init
+#  repo=`python -c "print '$SPARK_VERSION'.split('|')[0]"` 
+#  git_hash=`python -c "print '$SPARK_VERSION'.split('|')[1]"`
+#  git remote add origin $repo
+#  git fetch origin
+#  git checkout $git_hash
+  git checkout d
   sbt/sbt clean assembly
-  sbt/sbt publish-local
+  sbt/sbt clean assembly
+#  sbt/sbt publish-local
   popd
 
 # Pre-packaged spark version:

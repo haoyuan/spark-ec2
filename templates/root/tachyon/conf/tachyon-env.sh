@@ -36,7 +36,7 @@ CONF_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 export TACHYON_JAVA_OPTS+="
   -Dlog4j.configuration=file:$CONF_DIR/log4j.properties
-  -Dtachyon.debug=false
+  -Dtachyon.debug=true
   -Dtachyon.underfs.address=$TACHYON_UNDERFS_ADDRESS
   -Dtachyon.underfs.hdfs.impl=$TACHYON_UNDERFS_HDFS_IMPL
   -Dtachyon.data.folder=$TACHYON_UNDERFS_ADDRESS/tachyon/data

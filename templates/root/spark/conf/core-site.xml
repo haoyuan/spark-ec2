@@ -16,18 +16,33 @@
   </property>
 
   <property>
+    <name>dfs.block.size</name>
+    <value>536870912</value>
+  </property>
+
+  <property>
+    <name>fs.local.block.size</name>
+    <value>536870912</value>
+  </property>
+
+  <property>
     <name>io.file.buffer.size</name>
     <value>65536</value>
   </property>
 
   <property>
+    <name>dfs.datanode.max.locked.memory</name>
+    <value>1073741824</value>
+  </property>
+
+  <property>
     <name>dfs.client.read.shortcircuit</name>
-    <value>false</value>
+    <value>true</value>
   </property>
 
   <property>
     <name>dfs.client.read.shortcircuit.skip.checksum</name>
-    <value>false</value>
+    <value>true</value>
   </property>
 
   <property>
