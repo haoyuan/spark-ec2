@@ -19,7 +19,7 @@ then
 #  git remote add origin $repo
 #  git fetch origin
 #  git checkout $git_hash
-  git checkout d
+  git checkout branch-1.1-d
   sbt/sbt clean assembly
   sbt/sbt clean assembly
 #  sbt/sbt publish-local
